@@ -6,8 +6,8 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 
-public class testXueqiu {
-    //@Test
+public class TestXueqiu {
+    @Test
     public void testGet(){
         given().header("Cookie","xq_a_token=229a3a53d49b5d0078125899e528279b0e54b5fe; xq_a_token.sig=oI-FfEMvVYbAuj7Ho7Z9mPjGjjI; xq_r_token=8a43eb9046efe1c0a8437476082dc9aac6db2626; xq_r_token.sig=Efl_JMfn071_BmxcpNvmjMmUP40; Hm_lvt_1db88642e346389874251b5a1eded6e3=1523697743; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1523697743; u=251523697743367; __utma=1.2088487029.1523697744.1523697744.1523697744.1; __utmc=1; __utmz=1.1523697744.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmt=1; __utmb=1.1.10.1523697744; device_id=83f5b4098b22180306df31dc80c435b7")
                 .queryParam("symbol","SH000001")
@@ -17,7 +17,7 @@ public class testXueqiu {
         .then()
                 //.log().all()
                 .statusCode(200)
-                .body("chartlist.volume",hasItem(376755700));
+                .body("chartlist.volume",hasItem(361472600));
     }
 
     @BeforeClass
