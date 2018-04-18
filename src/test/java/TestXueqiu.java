@@ -17,7 +17,7 @@ public class TestXueqiu {
         .then()
                 //.log().all()
                 .statusCode(200)
-                .body("chartlist.volume",hasItem(361472600));
+                .body("chartlist.volume",hasItem(560444200));
     }
 
     @BeforeClass
